@@ -1,0 +1,141 @@
+.wrapper-header-bgc{
+    background-color:#e4fdf9;
+}
+.header{
+   position: relative;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   padding: 1.2rem 1.5rem;
+}
+.header-logo{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: var(--font-decoration);
+    font-weight:700;
+    font-size:2.2rem;
+    color:black;
+}
+.header-fixed{
+    position:fixed;
+    width:100%;
+    z-index: 999;
+}
+.header-navigation{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+.header-menu{
+    padding: 0.8rem 2rem;
+    width:100%;
+    display:none;
+    position: absolute;
+    top:98%;
+    right:0%;
+    background-color:#e4fdf9;
+}
+.header-menu-show .header-menu{
+    display:block;
+}
+.menu-item{
+    list-style: none;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid black;
+}
+.menu-link{
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family: var(--font-decoration);
+    color:black;
+    font-weight: 700;
+}
+.menu-link:hover,
+.menu-link:focus{
+    color:darkgrey;
+}
+.menu-hidden{
+    width:2.5rem;
+    height:2.5rem;
+}
+.menu-hidden::before{
+    display:block;
+    content:'';
+    width:2.5rem;
+    height:2.5rem;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../icons/menu.svg);
+}
+.menu-hidden::after{
+    display:none;
+    content:'';
+    width:2.5rem;
+    height:2.5rem;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../icons/close.svg)
+}
+.header-menu-show .menu-hidden::before{
+    display:none;
+}
+.header-menu-show .menu-hidden::after{
+    display: block;
+}
+
+
+/*-------------------------------------768px--------------------------------*/
+@media(min-width:760px){
+    .header{
+        padding: 2.2rem 1.8rem;
+    }
+}
+
+/*-------------------------------------1024px--------------------------------*/
+@media (min-width:1024px){
+    .header{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 2.2rem 0.5rem;
+    }
+    .header-logo{
+        font-size:2.5rem;
+    }
+    .header-navigation{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+    }
+    .header-menu{
+        position: static;
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        padding: 0rem;
+        width:100%;
+        top:0;
+        right:0;
+    }
+    .menu-hidden{
+        display:none;
+    }
+    .menu-item{
+        border:none;
+        padding: 0rem 1.6rem;
+    }
+    .menu-link{
+        font-size:1.2rem;
+    }
+}
