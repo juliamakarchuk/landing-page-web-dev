@@ -44,7 +44,6 @@ window.addEventListener('scroll',headerFixed);
 
 menu.addEventListener('click', function(e){
     if(e.target.nodeName=='LI'||e.target === this) return;
-    headerNavigation.classList.remove('header-menu-show');
     console.log(e.target);
     e.preventDefault();
     const href=e.target.getAttribute('href');
@@ -56,4 +55,5 @@ menu.addEventListener('click', function(e){
     console.log(window.pageYOffset);
     console.log(top);
     window.scrollTo({ top: top, behavior: "smooth" });
+    headerNavigation.classList.remove('header-menu-show');
 });
